@@ -44,9 +44,9 @@ try:
 
             line = '\n'.join([f'{k}\t{v}' for k, v in inference['predictions'].items()])
 
-            for k in inference['predictions']:
-                __db__.delete('flow', k)
-                __db__.delete('inference', data['data'])
+            # for k in inference['predictions']:
+            #     __db__.delete('flow', k)
+            #     __db__.delete('inference', data['data'])
 
             # Write in log
             log_file.write(line + '\n')
